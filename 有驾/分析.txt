@@ -1,0 +1,14 @@
+x-bd-traceid
+sign
+nid
+zid
+ts
+无需登录
+https://youjia.baidu.com/baijiahao/article
+
+Name: youjia
+Bundle ID: com.baidu.youjia
+PID: 6072
+frida -U -l hook.js -o hook.txt -p 6072
+frida -U -l hook_md5.js -o hook_md5.txt -p 6072
+frida-trace -U -i "CC_MD5" youjia          
